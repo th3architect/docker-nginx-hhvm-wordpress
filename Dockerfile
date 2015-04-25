@@ -1,8 +1,12 @@
-FROM phusion/baseimage:0.9.11
-MAINTAINER Philipz <philipzheng@gmail.com>
+FROM phusion/baseimage:latest
+MAINTAINER Ross Fisher <ubercomputers@gmail.com>
 
 RUN apt-get update
 RUN apt-get -y upgrade
+
+# ENVs for Tutum
+ENV DB_USER root
+ENV DB_PASSWORD **ChangeMe**
 
 # Basic Requirements
 RUN apt-get -y install nginx php5-mysql php-apc curl unzip
